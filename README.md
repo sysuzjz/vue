@@ -1,9 +1,9 @@
-#项目概述
+#项目概述#
 
-##项目使用vue2+vuex2+webpack2，使用babel来polyfill，使用eslint进行代码检查（build时）
+项目使用vue2+vuex2+webpack2，使用babel来polyfill，使用eslint进行代码检查（build时）
 
-#项目目录
-##目录基于vue-cli生成的项目结构(命令：vue init webpack abc)
+#项目目录#
+目录基于vue-cli生成的项目结构(命令：vue init webpack abc)
 
 * build： 构建用的配置文件，基础构建文件是webpack.base.config.js
 * config：所有设置项都放在此文件夹
@@ -33,14 +33,16 @@
 * test：单元测试
 
 
-#项目构建
+#项目构建#
+`npm run dev`: hot reload，默认在test.huahaicang.cn:8080，可以在config/index.js里更改  
+`npm run build`: 生产环境打包，对静态文件进行压缩  
+`npm run release`: build后执行hhc仓库拉取更新，提交hhc仓库代码，将build后的文件拷贝到同目录的hhcstatic仓库，提交并自动根据日期打tag。需要设置commit信息（必需）、是否生产环境（默认开发环境，影响tag命名）和提交的index（默认提交时的时和分）
+
+#代码风格#
+详见.eslintrc注释
 
 
-#代码风格
-
-
-#其他
-##z-index设置
+#z-index设置#
 普通业务组件：不设置z-index
 普通定位组件：不设置z-index
 mask：99
